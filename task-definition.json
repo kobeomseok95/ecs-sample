@@ -1,0 +1,24 @@
+{
+  "family": "ECS-Sample-Definition",
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "executionRoleArn": "arn:aws:iam::462433531752:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "cpu": "512",
+  "memory": "1024",
+  "containerDefinitions": [
+    {
+      "name": "sample-app",
+      "image": "462433531752.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-sample:latest",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ]
+}
