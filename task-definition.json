@@ -4,7 +4,7 @@
     "EC2"
   ],
   "executionRoleArn": "arn:aws:iam::462433531752:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
+  "networkMode": "bridge",
   "cpu": "512",
   "memory": "950",
   "containerDefinitions": [
