@@ -4,7 +4,7 @@
     "EC2"
   ],
   "executionRoleArn": "arn:aws:iam::462433531752:role/ecsTaskExecutionRole",
-  "networkMode": "bridge",
+  "networkMode": "awsvpc",
   "cpu": "512",
   "memory": "950",
   "containerDefinitions": [
@@ -14,7 +14,7 @@
       "portMappings": [
         {
           "containerPort": 8080,
-          "hostPort": 0,
+          "hostPort": 8080,
           "protocol": "tcp"
         }
       ],
