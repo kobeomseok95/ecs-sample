@@ -6,7 +6,7 @@
   "executionRoleArn": "arn:aws:iam::462433531752:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "cpu": "512",
-  "memory": "1024",
+  "memory": "950",
   "containerDefinitions": [
     {
       "name": "sample-app",
