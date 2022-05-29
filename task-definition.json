@@ -10,7 +10,7 @@
   "containerDefinitions": [
     {
       "name": "sample-app",
-      "image": "462433531752.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-sample:latest",
+      "image": "462433531752.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-sample-repository:latest",
       "portMappings": [
         {
           "containerPort": 8080,
