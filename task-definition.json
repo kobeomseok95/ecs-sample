@@ -1,15 +1,15 @@
 {
-  "family": "ECS-Sample-Definition",
+  "family": "ecs-sample-definition",
   "requiresCompatibilities": [
     "EC2"
   ],
   "executionRoleArn": "arn:aws:iam::462433531752:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "cpu": "512",
-  "memory": "950",
+  "memory": "512",
   "containerDefinitions": [
     {
-      "name": "sample-app",
+      "name": "ecs-sample-container",
       "image": "462433531752.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-sample-repository:latest",
       "portMappings": [
         {
