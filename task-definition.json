@@ -4,17 +4,19 @@
     "EC2"
   ],
   "executionRoleArn": "arn:aws:iam::462433531752:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
-  "cpu": "512",
-  "memory": "512",
+  "networkMode": "default",
+  "cpu": "1024",
+  "memory": "300",
   "containerDefinitions": [
     {
       "name": "ecs-sample-container",
       "image": "462433531752.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-sample-repository:latest",
+      "memory": 300,
+      "memoryReservation": 300,
       "portMappings": [
         {
           "containerPort": 8080,
-          "hostPort": 8080,
+          "hostPort": 0,
           "protocol": "tcp"
         }
       ],
