@@ -10,4 +10,9 @@ public class HelloController {
     public String hello() {
         return "Hello! This is ECS Sample Project.";
     }
+
+    @GetMapping("/hi")
+    public String hi() {
+        return "Hi! This is ECS Sample Project.";
+    }
 }
