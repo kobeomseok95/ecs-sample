@@ -1,22 +1,21 @@
 {
-  "family": "ecs-sample-definition",
+  "family": "ecs-sample-definition-v2",
   "requiresCompatibilities": [
     "EC2"
   ],
+  "cpu": 512,
+  "memory": 512,
   "executionRoleArn": "arn:aws:iam::462433531752:role/ecsTaskExecutionRole",
-  "networkMode": "bridge",
-  "cpu": "1024",
-  "memory": "300",
+  "networkMode": "awsvpc",
   "containerDefinitions": [
     {
       "name": "ecs-sample-container",
       "image": "462433531752.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-sample-repository:latest",
-      "memory": 300,
-      "memoryReservation": 300,
+      "cpu": 0,
       "portMappings": [
         {
           "containerPort": 8080,
-          "hostPort": 0,
+          "hostPort": 8080,
           "protocol": "tcp"
         }
       ],

@@ -58,6 +58,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: ecs-sample-service
-          cluster: ecs-sample-cluster
+          service: ecs-sample-service-v2
+          cluster: ecs-sample-cluster-v3
           wait-for-service-stability: true
