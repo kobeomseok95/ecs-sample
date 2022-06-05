@@ -1,4 +1,4 @@
-FROM adoptopenjdk:11-jdk-hotspot
+FROM openjdk:11.0.11
 
 ARG JAR_FILE=build/libs/ecs-0.0.1-SNAPSHOT.jar
 

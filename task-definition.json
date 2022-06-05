@@ -1,5 +1,5 @@
 {
-  "family": "ecs-sample-definition-v2",
+  "family": "ecs-t4g-task-definition",
   "requiresCompatibilities": [
     "EC2"
   ],
@@ -9,13 +9,13 @@
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
-      "name": "ecs-sample-container",
+      "name": "sample-container",
       "image": "462433531752.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-sample-repository:latest",
       "cpu": 0,
       "portMappings": [
         {
           "containerPort": 8080,
-          "hostPort": 8080,
+          "hostPort": 0,
           "protocol": "tcp"
         }
       ],
