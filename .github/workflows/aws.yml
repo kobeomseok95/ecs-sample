@@ -39,7 +39,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ecs-sample-repository
+          ECR_REPOSITORY: example-application
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build --platform arm64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -58,6 +58,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: ecs-t4g-svc-v4
-          cluster: ecs-t4g-small-cluster
+          service: sample-service-v2
+          cluster: sample-cluster
           wait-for-service-stability: true

@@ -26,4 +26,9 @@ public class HelloController {
     public String greet() {
         return "This is ECS Sample Project.";
     }
+
+    @GetMapping("/new")
+    public String newURI() {
+        return "Github Actions로 배포 성공";
+    }
 }
